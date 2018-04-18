@@ -181,13 +181,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.OnResponse = OnGetVoicesResp;
 
             return connector.Send(req);
@@ -214,7 +207,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             Voices result = new Voices();
             fsData data = null;
             Dictionary<string, object> customData = ((GetVoicesReq)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -277,13 +269,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.OnResponse = OnGetVoiceResp;
 
             return connector.Send(req);
@@ -309,7 +294,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             Voice result = new Voice();
             fsData data = null;
             Dictionary<string, object> customData = ((GetVoiceReq)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -419,13 +403,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.TextId = textId;
             req.Text = decodedText;
             req.Parameters["accept"] = _audioFormats[_audioFormat];
@@ -455,7 +432,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
                 throw new WatsonException("Wrong type of request object.");
 
             Dictionary<string, object> customData = ((ToSpeechRequest)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -542,13 +518,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.Parameters["text"] = text;
             req.Parameters["voice"] = GetVoiceType((VoiceType)voice);
             req.Parameters["format"] = format;
@@ -580,7 +549,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             Pronunciation result = new Pronunciation();
             fsData data = null;
             Dictionary<string, object> customData = ((GetPronunciationReq)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -637,13 +605,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.OnResponse = OnGetCustomizationsResp;
 
             RESTConnector connector = RESTConnector.GetConnector(Credentials, "/v1/customizations");
@@ -674,7 +635,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             Customizations result = new Customizations();
             fsData data = null;
             Dictionary<string, object> customData = ((GetCustomizationsReq)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -745,13 +705,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.Headers["Content-Type"] = "application/json";
             req.Headers["Accept"] = "application/json";
             req.Send = Encoding.UTF8.GetBytes(customizationJson);
@@ -785,7 +738,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             CustomizationID result = new CustomizationID();
             fsData data = null;
             Dictionary<string, object> customData = ((CreateCustomizationRequest)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -845,13 +797,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.Timeout = RequestTimeout;
             req.Delete = true;
             req.OnResponse = OnDeleteCustomizationResp;
@@ -883,7 +828,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
         private void OnDeleteCustomizationResp(RESTConnector.Request req, RESTConnector.Response resp)
         {
             Dictionary<string, object> customData = ((DeleteCustomizationRequest)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -923,13 +867,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.OnResponse = OnGetCustomizationResp;
 
             string service = "/v1/customizations/{0}";
@@ -961,7 +898,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             Customization result = new Customization();
             fsData data = null;
             Dictionary<string, object> customData = ((GetCustomizationRequest)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -1028,13 +964,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.Headers["Content-Type"] = "application/json";
             req.Headers["Accept"] = "application/json";
             req.Send = Encoding.UTF8.GetBytes(customizationJson);
@@ -1069,7 +998,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
         private void OnUpdateCustomizationResp(RESTConnector.Request req, RESTConnector.Response resp)
         {
             Dictionary<string, object> customData = ((UpdateCustomizationRequest)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -1109,13 +1037,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.OnResponse = OnGetCustomizationWordsResp;
 
             string service = "/v1/customizations/{0}/words";
@@ -1147,7 +1068,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             Words result = new Words();
             fsData data = null;
             Dictionary<string, object> customData = ((GetCustomizationWordsRequest)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -1214,13 +1134,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.Headers["Content-Type"] = "application/json";
             req.Headers["Accept"] = "application/json";
             req.Send = Encoding.UTF8.GetBytes(customizationJson);
@@ -1253,7 +1166,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
         private void OnAddCustomizationWordsResp(RESTConnector.Request req, RESTConnector.Response resp)
         {
             Dictionary<string, object> customData = ((AddCustomizationWordsRequest)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -1296,13 +1208,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.Timeout = RequestTimeout;
             req.Delete = true;
             req.OnResponse = OnDeleteCustomizationWordResp;
@@ -1334,7 +1239,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
         private void OnDeleteCustomizationWordResp(RESTConnector.Request req, RESTConnector.Response resp)
         {
             Dictionary<string, object> customData = ((DeleteCustomizationWordRequest)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -1377,13 +1281,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.OnResponse = OnGetCustomizationWordResp;
 
             string service = "/v1/customizations/{0}/words/{1}";
@@ -1415,7 +1312,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             Translation result = new Translation();
             fsData data = null;
             Dictionary<string, object> customData = ((GetCustomizationWordRequest)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -1483,13 +1379,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.Headers["Content-Type"] = "application/json";
             req.Headers["Accept"] = "application/json";
             req.Headers["X-HTTP-Method-Override"] = "PUT";
@@ -1523,7 +1412,6 @@ namespace IBM.Watson.DeveloperCloud.Services.TextToSpeech.v1
         private void OnAddCustomizationWordResp(RESTConnector.Request req, RESTConnector.Response resp)
         {
             Dictionary<string, object> customData = ((AddCustomizationWordRequest)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {

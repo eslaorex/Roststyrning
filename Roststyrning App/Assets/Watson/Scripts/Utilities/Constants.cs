@@ -47,21 +47,9 @@ namespace IBM.Watson.DeveloperCloud.Utilities
         public static class String
         {
             /// <exclude />
-            public const string Version = "watson-apis-unity-sdk/2.2.2";
+            public const string Version = "watson-apis-unity-sdk/2.2.1";
             /// <exclude />
             public const string DebugDispalyQuality = "Quality: {0}";
-            /// <summary>
-            /// Name for creating custom headers in CustomData.
-            /// </summary>
-            public const string CUSTOM_REQUEST_HEADERS = "request_headers";
-            /// <summary>
-            /// Name for accessing response headers in CustomData.
-            /// </summary>
-            public const string RESPONSE_HEADERS = "response_headers";
-            /// <summary>
-            /// Name for accessing json.
-            /// </summary>
-            public const string JSON = "json";
         }
 
         /// <summary>

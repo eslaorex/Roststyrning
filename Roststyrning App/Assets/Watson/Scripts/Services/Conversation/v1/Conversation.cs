@@ -155,13 +155,6 @@ namespace IBM.Watson.DeveloperCloud.Services.Conversation.v1
             req.Send = Encoding.UTF8.GetBytes(reqString);
             req.OnResponse = MessageResp;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
 
             return connector.Send(req);
         }
@@ -223,13 +216,6 @@ namespace IBM.Watson.DeveloperCloud.Services.Conversation.v1
             req.Send = Encoding.UTF8.GetBytes(stringToSend);
             req.OnResponse = MessageResp;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
 
             return connector.Send(req);
         }
@@ -256,7 +242,6 @@ namespace IBM.Watson.DeveloperCloud.Services.Conversation.v1
             object result = null;
             string data = "";
             Dictionary<string, object> customData = ((MessageReq)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {

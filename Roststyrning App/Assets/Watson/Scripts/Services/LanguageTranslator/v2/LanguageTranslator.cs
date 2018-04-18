@@ -173,13 +173,6 @@ namespace IBM.Watson.DeveloperCloud.Services.LanguageTranslator.v2
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.OnResponse = TranslateResponse;
             req.Send = Encoding.UTF8.GetBytes(json);
             req.Headers["accept"] = "application/json";
@@ -208,7 +201,6 @@ namespace IBM.Watson.DeveloperCloud.Services.LanguageTranslator.v2
             Translations result = new Translations();
             fsData data = null;
             Dictionary<string, object> customData = ((TranslateReq)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -294,13 +286,6 @@ namespace IBM.Watson.DeveloperCloud.Services.LanguageTranslator.v2
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.OnResponse = GetModelsResponse;
 
             if (!string.IsNullOrEmpty(sourceFilter))
@@ -336,7 +321,6 @@ namespace IBM.Watson.DeveloperCloud.Services.LanguageTranslator.v2
             TranslationModels result = new TranslationModels();
             fsData data = null;
             Dictionary<string, object> customData = ((GetModelsReq)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -396,13 +380,6 @@ namespace IBM.Watson.DeveloperCloud.Services.LanguageTranslator.v2
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.Function = WWW.EscapeURL(model_id);
             req.OnResponse = GetModelResponse;
 
@@ -430,7 +407,6 @@ namespace IBM.Watson.DeveloperCloud.Services.LanguageTranslator.v2
             TranslationModel result = new TranslationModel();
             fsData data = null;
             Dictionary<string, object> customData = ((GetModelReq)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -502,13 +478,6 @@ namespace IBM.Watson.DeveloperCloud.Services.LanguageTranslator.v2
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.Parameters["base_model_id"] = baseModelId;
             req.Parameters["name"] = customModelName;
             req.OnResponse = OnCreateModelResponse;
@@ -589,7 +558,6 @@ namespace IBM.Watson.DeveloperCloud.Services.LanguageTranslator.v2
             TranslationModel result = new TranslationModel();
             fsData data = null;
             Dictionary<string, object> customData = ((CreateModelRequest)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -649,13 +617,6 @@ namespace IBM.Watson.DeveloperCloud.Services.LanguageTranslator.v2
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.Function = WWW.EscapeURL(model_id);
             req.OnResponse = DeleteModelResponse;
             req.Delete = true;
@@ -683,7 +644,6 @@ namespace IBM.Watson.DeveloperCloud.Services.LanguageTranslator.v2
             DeleteModelResult result = new DeleteModelResult();
             fsData data = null;
             Dictionary<string, object> customData = ((DeleteModelReq)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -742,13 +702,6 @@ namespace IBM.Watson.DeveloperCloud.Services.LanguageTranslator.v2
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.OnResponse = GetLanguagesResponse;
 
             return connector.Send(req);
@@ -775,7 +728,6 @@ namespace IBM.Watson.DeveloperCloud.Services.LanguageTranslator.v2
             Languages result = new Languages();
             fsData data = null;
             Dictionary<string, object> customData = ((GetLanguagesReq)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
@@ -837,13 +789,6 @@ namespace IBM.Watson.DeveloperCloud.Services.LanguageTranslator.v2
             req.SuccessCallback = successCallback;
             req.FailCallback = failCallback;
             req.CustomData = customData == null ? new Dictionary<string, object>() : customData;
-            if(req.CustomData.ContainsKey(Constants.String.CUSTOM_REQUEST_HEADERS))
-            {
-                foreach(KeyValuePair<string, string> kvp in req.CustomData[Constants.String.CUSTOM_REQUEST_HEADERS] as Dictionary<string, string>)
-                {
-                    req.Headers.Add(kvp.Key, kvp.Value);
-                }
-            }
             req.Send = Encoding.UTF8.GetBytes(text);
             req.Headers["Content-Type"] = "text/plain";
             req.Headers["Accept"] = "application/json";
@@ -873,7 +818,6 @@ namespace IBM.Watson.DeveloperCloud.Services.LanguageTranslator.v2
             IdentifiedLanguages result = new IdentifiedLanguages();
             fsData data = null;
             Dictionary<string, object> customData = ((IdentifyReq)req).CustomData;
-            customData.Add(Constants.String.RESPONSE_HEADERS, resp.Headers);
 
             if (resp.Success)
             {
