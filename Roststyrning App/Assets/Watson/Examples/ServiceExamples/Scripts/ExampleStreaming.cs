@@ -35,6 +35,8 @@ public class ExampleStreaming : MonoBehaviour
     private string _url;
     #endregion
 
+    public LenguageTranslatorDemo lenguageTranslatorDemo; 
+
     public Text ResultsField;
 
     private int _recordingRoutine = 0;
@@ -181,6 +183,7 @@ public class ExampleStreaming : MonoBehaviour
                     string text = string.Format("{0} ({1}, {2:0.00})\n", alt.transcript, res.final ? "Final" : "Interim", alt.confidence);
                     Log.Debug("ExampleStreaming.OnRecognize()", text);
                     ResultsField.text = text;
+                    lenguageTranslatorDemo.Translate(alt.transcript);
                 }
 
                 if (res.keywords_result != null && res.keywords_result.keyword != null)
