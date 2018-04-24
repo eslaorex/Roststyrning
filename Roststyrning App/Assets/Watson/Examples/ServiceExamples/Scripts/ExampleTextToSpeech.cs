@@ -87,7 +87,7 @@ public class ExampleTextToSpeech : MonoBehaviour
 
         //	Get Voice
         Log.Debug("ExampleTextToSpeech.Examples()", "Attempting to get voice {0}.", VoiceType.en_US_Allison);
-        _textToSpeech.GetVoice(OnGetVoice, OnFail, VoiceType.en_US_Allison);
+      //  _textToSpeech.GetVoice(OnGetVoice, OnFail, VoiceType.en_US_Allison);
         while (!_getVoiceTested)
             yield return null;
 
