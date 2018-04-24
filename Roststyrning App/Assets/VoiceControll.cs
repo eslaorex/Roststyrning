@@ -7,9 +7,12 @@ using System;
 
 public class VoiceControll : MonoBehaviour {
 
-    
-    public Rigidbody cannonBall;
-    public Transform firePoint;
+    [SerializeField]
+    private Rigidbody cannonBall;
+    [SerializeField]
+    private Transform firePoint;
+    public GameObject lightSpot;
+    public AudioSource _AudioSource; 
 
 
     private Dictionary<string, Action> keywordActions = new Dictionary<string, Action>();
@@ -22,6 +25,9 @@ public class VoiceControll : MonoBehaviour {
         keywordActions.Add("fire", Fire);
         keywordActions.Add("turn right", TurnRight);
         keywordActions.Add("turn left", TurnLeft);
+        keywordActions.Add("lights on", LightsOn);
+        keywordActions.Add("lights off", LightsOff);
+        keywordActions.Add("Play some music", PlayMusic);
 
         keywordRecognizer = new KeywordRecognizer(keywordActions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
@@ -51,6 +57,24 @@ public class VoiceControll : MonoBehaviour {
         ball.AddForce(firePoint.transform.forward * 500f);
 
     }
+
+
+    private void LightsOn()
+    {
+        lightSpot.SetActive(true);
+    }
+
+    private void LightsOff()
+    {
+        lightSpot.SetActive(false);
+    }
+
+    private void PlayMusic()
+    {
+        _AudioSource.Play();
+    }
+
+    
 
     // Update is called once per frame
     void Update()
