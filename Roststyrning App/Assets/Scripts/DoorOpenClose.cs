@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorOpenClose : MonoBehaviour {
-    public Animator _animator;
+    public Animator _animator = null;
 
 
 	// Use this for initialization
@@ -20,6 +20,17 @@ public class DoorOpenClose : MonoBehaviour {
         }
         
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Debug.Log("COLLLIDER");
+            _animator.SetBool("open", false);
+        }
+
+    }
+
 
     // Update is called once per frame
     void Update () {
