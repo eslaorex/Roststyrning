@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FxTemporaire
+  - projectile
+  - Cubes
+  - Spheres
+  - Leg
+  - Arm
+  - Saucers
+  - Torso
+  - OtherSaucers
+  - Enemy
   layers:
   - Default
   - TransparentFX
