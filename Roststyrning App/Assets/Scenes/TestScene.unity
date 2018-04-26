@@ -5970,6 +5970,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 400024, guid: 7ae8f8b980f4b8546b3ec34fbc9744a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.35985994
+      objectReference: {fileID: 0}
+    - target: {fileID: 400024, guid: 7ae8f8b980f4b8546b3ec34fbc9744a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.031609964
+      objectReference: {fileID: 0}
+    - target: {fileID: 400036, guid: 7ae8f8b980f4b8546b3ec34fbc9744a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400036, guid: 7ae8f8b980f4b8546b3ec34fbc9744a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ae8f8b980f4b8546b3ec34fbc9744a3, type: 3}
   m_IsPrefabParent: 0
@@ -6083,8 +6099,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.2645552, y: 2.126554, z: 2.9083192}
-  m_Center: {x: -0.06326081, y: 0.95325553, z: -0.9541587}
+  m_Size: {x: 2.2645552, y: 2.126554, z: 4.9196663}
+  m_Center: {x: -0.06326081, y: 0.9532555, z: 0.051516477}
 --- !u!95 &1282674736
 Animator:
   serializedVersion: 3
@@ -6094,7 +6110,7 @@ Animator:
   m_GameObject: {fileID: 1282674732}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 686897e2d92b56f4887cb5e24a87bd86, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1a7587d5152d84a418292991598980ad, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
