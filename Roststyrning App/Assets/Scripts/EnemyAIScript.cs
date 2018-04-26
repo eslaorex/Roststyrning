@@ -19,17 +19,17 @@ public class EnemyAIScript : MonoBehaviour
         if(isPlayerAlive)
         {
         playerDistance = Vector3.Distance (player.position, transform.position);
-          if (playerDistance < 15f)
+          if (playerDistance < 25f)
            {
             LookAtPlayer();
            }
-          if (playerDistance < 12f)
+          if (playerDistance < 22f)
         {
-            if (playerDistance > 2f)
+            if (playerDistance > 5f)
             {
                 Chase();
             }
-            else if (playerDistance < 2f)
+            else if (playerDistance < 5f)
             {
                 Attack();
             }           
