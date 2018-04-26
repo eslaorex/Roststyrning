@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 7ae8f8b980f4b8546b3ec34fbc9744a3
+timeCreated: 1524728114
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: domo
+    100004: doorFrame
+    100006: doorFrame 1
+    100008: doorFrame 2
+    100010: doorFrame 3
+    100012: doorFrame 4
+    100014: doorFrame 5
+    100016: leftDoor
+    100018: leftDoor 1
+    100020: leftDoor 2
+    100022: leftDoor 3
+    100024: leftDoor 4
+    100026: leftDoor 5
+    100028: rightDoor
+    100030: rightDoor 1
+    100032: rightDoor 2
+    100034: rightDoor 3
+    100036: rightDoor 4
+    100038: rightDoor 5
+    100040: SciFiDoor2
+    100042: SciFiDoor3
+    100044: SciFiDoor4
+    100046: SciFiDoor5
+    100048: SciFiDoor6
+    100050: SciFiDoor7
+    400000: //RootNode
+    400002: domo
+    400004: doorFrame
+    400006: doorFrame 1
+    400008: doorFrame 2
+    400010: doorFrame 3
+    400012: doorFrame 4
+    400014: doorFrame 5
+    400016: leftDoor
+    400018: leftDoor 1
+    400020: leftDoor 2
+    400022: leftDoor 3
+    400024: leftDoor 4
+    400026: leftDoor 5
+    400028: rightDoor
+    400030: rightDoor 1
+    400032: rightDoor 2
+    400034: rightDoor 3
+    400036: rightDoor 4
+    400038: rightDoor 5
+    400040: SciFiDoor2
+    400042: SciFiDoor3
+    400044: SciFiDoor4
+    400046: SciFiDoor5
+    400048: SciFiDoor6
+    400050: SciFiDoor7
+    2100000: lambert1
+    2300000: domo
+    2300002: doorFrame
+    2300004: doorFrame 1
+    2300006: doorFrame 2
+    2300008: doorFrame 3
+    2300010: doorFrame 4
+    2300012: doorFrame 5
+    2300014: leftDoor
+    2300016: leftDoor 1
+    2300018: leftDoor 2
+    2300020: leftDoor 3
+    2300022: leftDoor 4
+    2300024: leftDoor 5
+    2300026: rightDoor
+    2300028: rightDoor 1
+    2300030: rightDoor 2
+    2300032: rightDoor 3
+    2300034: rightDoor 4
+    2300036: rightDoor 5
+    3300000: domo
+    3300002: doorFrame
+    3300004: doorFrame 1
+    3300006: doorFrame 2
+    3300008: doorFrame 3
+    3300010: doorFrame 4
+    3300012: doorFrame 5
+    3300014: leftDoor
+    3300016: leftDoor 1
+    3300018: leftDoor 2
+    3300020: leftDoor 3
+    3300022: leftDoor 4
+    3300024: leftDoor 5
+    3300026: rightDoor
+    3300028: rightDoor 1
+    3300030: rightDoor 2
+    3300032: rightDoor 3
+    3300034: rightDoor 4
+    3300036: rightDoor 5
+    4300000: domo
+    4300002: rightDoor
+    4300004: doorFrame
+    4300006: leftDoor
+    4300008: rightDoor
+    4300010: doorFrame
+    4300012: leftDoor
+    4300014: rightDoor
+    4300016: doorFrame
+    4300018: leftDoor
+    4300020: rightDoor
+    4300022: doorFrame
+    4300024: leftDoor
+    4300026: rightDoor
+    4300028: doorFrame
+    4300030: leftDoor
+    4300032: rightDoor
+    4300034: doorFrame
+    4300036: leftDoor
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
