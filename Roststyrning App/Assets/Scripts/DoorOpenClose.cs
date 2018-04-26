@@ -5,6 +5,9 @@ using UnityEngine;
 public class DoorOpenClose : MonoBehaviour {
     public Animator _animator = null;
 
+    public int index = -1;
+  
+
 
 	// Use this for initialization
 	void Start () {
@@ -18,8 +21,15 @@ public class DoorOpenClose : MonoBehaviour {
             Debug.Log("COLLLIDER");
             _animator.SetBool("open", true);
         }
+
+       
+
         
     }
+
+
+
+
 
     private void OnTriggerExit(Collider other)
     {
@@ -39,3 +49,4 @@ public class DoorOpenClose : MonoBehaviour {
 
 
 }
+

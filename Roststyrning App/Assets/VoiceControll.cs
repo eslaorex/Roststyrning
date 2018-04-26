@@ -7,16 +7,16 @@ using System;
 
 public class VoiceControll : MonoBehaviour {
 
-    [SerializeField]
-    private Rigidbody cannonBall;
-    [SerializeField]
-    private Transform firePoint;
+    
+    //private Rigidbody cannonBall;
+    
+    //private Transform firePoint;
     public GameObject lightSpot;
     public AudioSource _AudioSource;
 
     public GameObject bullet;
     private float bulletSpeed = 3000f;
-    private float bulletLife = 5f;
+    private float bulletLife = 3f;
 
 
 
@@ -66,10 +66,6 @@ public class VoiceControll : MonoBehaviour {
 
     private void Fire()
     {
-        /*
-        var ball = Instantiate(cannonBall, firePoint.position, firePoint.rotation) as Rigidbody;
-        ball.AddForce(firePoint.transform.forward * 500f);
-        */
 
         GameObject bulletClone = Instantiate(bullet, bullet.transform.position, bullet.transform.rotation) as GameObject;
         bulletClone.SetActive(true);
